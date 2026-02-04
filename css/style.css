@@ -1,0 +1,191 @@
+:root {
+    --joy-primary: #6366f1;
+    --joy-bg: #f8fbff; /* Soft Happiness Background */
+    --joy-dark: #1e293b;
+    --joy-muted: #64748b;
+}
+
+body.happiness-theme {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--joy-bg);
+    color: var(--joy-dark);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.py-100 { padding: 100px 0; }
+.fw-800 { font-weight: 800; }
+.ls-2 { letter-spacing: 2px; }
+
+
+
+/* Glassmorphism Navigation */
+.glass-nav {
+    background: transparent !important;
+}
+
+.brand-text {
+    color: var(--dark) !important;
+    letter-spacing: -1px;
+}
+
+.search-glass {
+    background: #f1f5f9;
+    padding: 8px 15px;
+    border-radius: 30px;
+    align-items: center;
+}
+
+.search-glass input {
+    border: none; background: transparent; outline: none;
+    font-size: 0.9rem; margin-left: 10px; width: 150px;
+}
+
+.icon-circle {
+    width: 40px; height: 40px; background: #fff;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%; color: #64748b; border: 1px solid #f1f5f9;
+    position: relative; cursor: pointer;
+}
+
+.noti-dot {
+    position: absolute; top: 0; right: 0;
+    width: 8px; height: 8px; background: #ef4444;
+    border-radius: 50%; border: 2px solid #fff;
+}
+
+/* Hero & Watch Button */
+.py-200 { padding: 150px 0; }
+
+.mood-glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+.mood-icon-btn {
+    border: none; background: #fff; width: 50px; height: 50px;
+    border-radius: 15px; font-size: 1.5rem; transition: 0.3s;
+}
+
+.mood-icon-btn:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+.watch-btn {
+    background: transparent; border: none; padding: 10px;
+}
+
+.play-circle {
+    width: 60px; height: 60px; background: #fff;
+    border-radius: 50%; display: flex; align-items: center;
+    justify-content: center; font-size: 1.5rem; color: var(--primary);
+    box-shadow: 0 15px 30px rgba(99, 102, 241, 0.15);
+    transition: 0.3s;
+}
+
+.watch-btn:hover .play-circle { transform: scale(1.1); background: var(--primary); color: #fff; }
+
+/* Modern Footer */
+.modern-footer { background: #fff; border-top: 1px solid #f1f5f9; }
+
+.glass-card-footer {
+    background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+}
+
+.footer-list li { margin-bottom: 15px; }
+.footer-list a { text-decoration: none; color: #64748b; font-weight: 600; transition: 0.3s; }
+.footer-list a:hover { color: var(--primary); padding-left: 8px; }
+
+.social-glass {
+    width: 45px; height: 45px; background: #f8fafc;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%; color: var(--dark); border: 1px solid #f1f5f9;
+    text-decoration: none; transition: 0.3s;
+}
+
+.social-glass:hover { background: var(--primary); color: #fff; transform: translateY(-3px); }
+
+.input-group-glass {
+    background: #f8fafc; padding: 5px; border-radius: 15px;
+    display: flex; border: 1px solid #f1f5f9;
+}
+
+.input-group-glass input {
+    border: none; background: transparent; padding: 10px; flex: 1; outline: none;
+}
+
+.input-group-glass button {
+    background: var(--dark); color: #fff; border: none;
+    width: 40px; height: 40px; border-radius: 12px;
+}
+/* Hero Section Gradients */
+.joy-gradient {
+    background: linear-gradient(90deg, #6366f1, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.secondary-joy { color: #64748b; }
+
+.mood-container {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,1);
+}
+
+.mood-pill {
+    border: none; background: #fff; padding: 15px 25px;
+    border-radius: 25px; transition: 0.3s;
+}
+
+.mood-pill:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(99, 102, 241, 0.15); }
+.mood-pill span { font-size: 2.2rem; display: block; }
+.mood-pill small { font-weight: 800; font-size: 0.75rem; color: #94a3b8; }
+
+/* AI Banner & Orb */
+.ai-joy-banner { background: #fff; border-left: 8px solid var(--joy-primary); }
+.ai-bubble-orb {
+    width: 100px; height: 100px; background: var(--joy-primary);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    color: white; font-weight: 800; font-size: 1.5rem;
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.4);
+}
+
+.blur-blob {
+    position: absolute; top: -50px; right: -50px; width: 200px; height: 200px;
+    background: rgba(99, 102, 241, 0.1); filter: blur(60px); border-radius: 50%;
+}
+
+/* Section Badge */
+.section-badge {
+    text-transform: uppercase; font-size: 0.75rem; font-weight: 800;
+    color: var(--joy-primary); letter-spacing: 2px;
+}
+
+/* Video Card Aesthetic */
+.joy-video-item { transition: 0.3s; cursor: pointer; }
+.joy-video-item:hover { transform: translateY(-10px); }
+.play-btn-v3 {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 60px; height: 60px; background: white; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem; color: var(--joy-primary);
+}
+
+/* Footer Premium Links */
+.footer-joy { background: #fff; }
+.f-links li { margin-bottom: 15px; }
+.f-links a { color: var(--joy-muted); text-decoration: none; transition: 0.3s; font-weight: 600; }
+.f-links a:hover { color: var(--joy-primary); padding-left: 8px; }
+
+.newsletter-wrap { background: #f1f5f9; padding: 5px; border-radius: 15px; display: flex; }
+.newsletter-wrap input { border: none; background: transparent; flex: 1; padding: 10px; outline: none; }
+.newsletter-wrap button { background: var(--joy-dark); color: white; border: none; width: 40px; height: 40px; border-radius: 12px; }
+
+/* AI Floating Chatbot */
+.ai-assistant-wrapper { position: fixed; bottom: 30px; right: 30px; z-index: 1000; }
+.ai-fab {
+    width: 65px; height: 65px; background: var(--joy-dark); color: white;
+    border-radius: 20px; border: none; font-size: 1.8rem;
+}
+
+.ai-p-window { width: 350px; background: white; border-radius: 30px; overflow: hidden; margin-bottom: 20px; }
+.ai-p-header { background: var(--joy-dark); color: white; padding: 20px; display: flex; justify-content: space-between; }
+.online-indicator { width: 10px; height: 10px; background: #22c55e; border-radius: 50%; }
