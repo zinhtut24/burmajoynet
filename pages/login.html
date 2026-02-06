@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | BurmaJoyNet - Your Daily Happiness Hub</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="reg-bg">
+
+    <div id="loading-screen">
+        <div class="loader-content text-center">
+            <div class="spinner-joy"></div>
+            <h3 class="mt-4 fw-800 logo-brand">Burma<span>JoyNet</span></h3>
+            <p class="text-muted italic">Spreading Smiles...</p>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top custom-nav shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-800 logo-brand" href="../index.html">Burma<span>JoyNet</span></a>
+            <div class="ms-auto">
+                <a href="../index.html" class="btn btn-link text-decoration-none text-dark fw-bold">
+                    <i class="bi bi-house-door me-1"></i> Home
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container min-vh-100 d-flex align-items-center justify-content-center py-5">
+        <div class="row w-100 justify-content-center">
+            <div class="col-lg-10 col-xl-9">
+                <div class="card border-0 shadow-2xl overflow-hidden rounded-5 reg-card-glass" data-aos="zoom-in">
+                    <div class="row g-0">
+                        
+                        <div class="col-md-5 bg-joy-gradient p-5 text-white d-none d-md-flex flex-column justify-content-center text-center">
+                            <div class="mb-4">
+                                <div class="login-illustration mb-4">
+                                    <i class="bi bi-emoji-laughing-fill display-1 text-warning"></i>
+                                </div>
+                                <h2 class="fw-800">Welcome Back!</h2>
+                                <p class="opacity-75 mt-3">We've missed you. Log in to check your Happiness Score and see what your clubs are up to today.</p>
+                            </div>
+                            <div class="mt-4">
+                                <p class="small opacity-50 mb-2">New here?</p>
+                                <a href="register.html" class="btn btn-outline-light rounded-pill px-4 fw-bold">Create Account</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-7 p-4 p-md-5 bg-white">
+                            <div class="mb-4">
+                                <h3 class="fw-800">Login</h3>
+                                <p class="text-muted small">Enter your credentials to access your Joy Hub.</p>
+                            </div>
+
+                            <form id="login-form">
+                                <div class="mb-3">
+                                    <label class="form-label small fw-800 text-uppercase tracking-wider">Username or Email</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light border-end-0"><i class="bi bi-person text-muted"></i></span>
+                                        <input type="text" class="form-control custom-input border-start-0 shadow-none" placeholder="joy_user88" required>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <div class="d-flex justify-content-between">
+                                        <label class="form-label small fw-800 text-uppercase tracking-wider">Password</label>
+                                        <a href="#" class="small text-decoration-none fw-bold">Forgot?</a>
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light border-end-0"><i class="bi bi-lock text-muted"></i></span>
+                                        <input type="password" class="form-control custom-input border-start-0 shadow-none" placeholder="••••••••" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input shadow-none" type="checkbox" id="rememberMe">
+                                    <label class="form-check-label small text-muted" for="rememberMe">
+                                        Keep me logged in
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="btn btn-joy-primary w-100 rounded-pill py-3 fw-800 shadow-lg border-0 transition-all">
+                                    Sign In <i class="bi bi-box-arrow-in-right ms-2"></i>
+                                </button>
+                                
+                                <div class="mt-4 text-center d-md-none">
+                                    <p class="small text-muted">Don't have an account? <a href="register.html" class="fw-bold text-decoration-none text-primary">Sign Up</a></p>
+                                </div>
+                            </form>
+
+                            <div class="mt-5 p-3 rounded-4 bg-light border-0 text-center">
+                                <p class="small text-muted mb-0 italic">"A smile is the best makeup any girl can wear."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        // Loading Screen Logic
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loading-screen');
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => loader.style.display = 'none', 600);
+            }, 1000);
+        });
+
+        // Simple Login Simulation
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // ပုံမှန်ဆိုရင် ဒီမှာ authentication လုပ်ရမှာပါ
+            alert('Welcome back to BurmaJoyNet!');
+            window.location.href = '../index.html'; 
+        });
+    </script>
+</body>
+</html>
