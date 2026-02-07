@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Challenges | BurmaJoyNet</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-light">
+
+    <div id="loading-screen">
+        <div class="loader-content text-center">
+            <div class="spinner-joy"></div>
+            <h3 class="mt-4 fw-800 logo-brand">Burma<span>JoyNet</span></h3>
+            <p class="text-muted italic">"Ready for today's quest?"</p>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top main-nav shadow-sm bg-white">
+        <div class="container">
+            <a class="navbar-brand logo-brand fw-800" href="../index.html">Burma<span>JoyNet</span></a>
+            <div class="ms-auto d-flex align-items-center gap-3">
+                <a href="home-feed.html" class="btn btn-outline-primary btn-sm rounded-pill px-3 fw-bold">
+                    <i class="bi bi-house-door me-1"></i> Dashboard
+                </a>
+                <div class="user-profile-mini p-1 px-2 rounded-pill bg-white border d-flex align-items-center gap-2 shadow-sm">
+                    <span class="small fw-800">Level 12</span>
+                    <div class="avatar-sm bg-warning text-white rounded-circle d-flex align-items-center justify-content-center fw-bold">Z</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <header class="text-center mb-5" data-aos="fade-down">
+            <h1 class="display-4 fw-800 mb-2">The Joy <span class="text-gradient">Quest</span></h1>
+            <p class="text-muted">Complete tasks to earn Joy Points and unlock exclusive badges!</p>
+            <div class="d-flex justify-content-center gap-3 mt-4">
+                <div class="stat-pill px-4 py-2 bg-white rounded-pill shadow-sm border border-warning">
+                    <i class="bi bi-lightning-charge-fill text-warning"></i> <span class="fw-bold">Current Streak: 5 Days</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="row g-4">
+            <div class="col-lg-8" data-aos="fade-right">
+                <h4 class="fw-800 mb-4"><i class="bi bi-calendar-check me-2 text-primary"></i>Available Tasks</h4>
+                
+                <div class="challenge-card p-4 rounded-5 bg-white shadow-sm mb-4 border-start border-primary border-5 transition-all">
+                    <div class="row align-items-center">
+                        <div class="col-md-8">
+                            <span class="badge bg-soft-primary text-primary rounded-pill px-3 mb-2 small">Daily Task</span>
+                            <h5 class="fw-800">Say Hi to AI Buddy!</h5>
+                            <p class="text-muted small mb-0">Start a conversation with AI Buddy and share one positive thing about your morning.</p>
+                        </div>
+                        <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                            <div class="reward-box mb-2">
+                                <span class="fw-800 text-primary">+50 XP</span>
+                            </div>
+                            <button class="btn btn-joy-primary rounded-pill px-4 fw-bold shadow-sm" onclick="window.location.href='ai-buddy.html'">Go Chat <i class="bi bi-arrow-right small"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="challenge-card p-4 rounded-5 bg-white shadow-sm mb-4 border-start border-success border-5 transition-all">
+                    <div class="row align-items-center">
+                        <div class="col-md-8">
+                            <span class="badge bg-soft-success text-success rounded-pill px-3 mb-2 small">Community Task</span>
+                            <h5 class="fw-800 f-art">Spread the Love</h5>
+                            <p class="text-muted small mb-0">React to 5 posts in the 'Photography' or 'Art' Clubs to support other creators.</p>
+                        </div>
+                        <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                            <div class="reward-box mb-2">
+                                <span class="fw-800 text-success">+100 XP</span>
+                            </div>
+                            <button class="btn btn-outline-success rounded-pill px-4 fw-bold" onclick="window.location.href='clubs.html'">Visit Clubs</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="challenge-card p-4 rounded-5 bg-white shadow-sm mb-4 border-start border-warning border-5 transition-all">
+                    <div class="row align-items-center">
+                        <div class="col-md-8">
+                            <span class="badge bg-soft-warning text-warning rounded-pill px-3 mb-2 small">Weekly Quest</span>
+                            <h5 class="fw-800">Joy Video Creator</h5>
+                            <p class="text-muted small mb-0">Upload a video that spreads joy and receive at least 10 likes from others.</p>
+                        </div>
+                        <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                            <div class="reward-box mb-2">
+                                <span class="fw-800 text-warning">+500 XP</span>
+                            </div>
+                            <button class="btn btn-outline-warning rounded-pill px-4 fw-bold" onclick="window.location.href='videos.html'">Upload Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4" data-aos="fade-left">
+                <div class="card border-0 shadow-sm rounded-5 p-4 bg-joy-gradient text-white mb-4">
+                    <h6 class="fw-800 mb-3 small opacity-75 text-uppercase">Your Rank</h6>
+                    <div class="d-flex align-items-center gap-3 mb-4">
+                        <div class="rank-badge bg-white text-primary rounded-circle fw-800 fs-4">#42</div>
+                        <div>
+                            <h5 class="fw-800 mb-0">Top 5%</h5>
+                            <small class="opacity-50">Global Ranking</small>
+                        </div>
+                    </div>
+                    <div class="progress bg-white bg-opacity-25" style="height: 8px; border-radius: 5px;">
+                        <div class="progress-bar bg-warning" style="width: 85%"></div>
+                    </div>
+                    <small class="mt-2 d-block opacity-75">850 XP to reach Rank #41</small>
+                </div>
+
+                <div class="card border-0 shadow-sm rounded-5 p-4 bg-white">
+                    <h5 class="fw-800 mb-4 text-dark"><i class="bi bi-award me-2 text-warning"></i>Weekly Top Joy</h5>
+                    
+                    <div class="leaderboard-list">
+                        <div class="d-flex align-items-center justify-content-between mb-3 p-2 rounded-4 bg-light shadow-sm">
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="fw-800 text-warning ms-2">1</span>
+                                <img src="https://i.pravatar.cc/150?u=a" class="rounded-circle border border-warning" width="35" height="35">
+                                <span class="small fw-bold">Kyaw Swa</span>
+                            </div>
+                            <span class="badge bg-warning-soft text-warning fw-bold small">12.5k XP</span>
+                        </div>
+                        
+                        <div class="d-flex align-items-center justify-content-between mb-3 p-2">
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="fw-800 text-muted ms-2">2</span>
+                                <img src="https://i.pravatar.cc/150?u=b" class="rounded-circle" width="35" height="35">
+                                <span class="small fw-bold text-muted">Htet Htet</span>
+                            </div>
+                            <span class="text-muted small fw-bold">11.2k XP</span>
+                        </div>
+
+                        <div class="d-flex align-items-center justify-content-between p-2">
+                            <div class="d-flex align-items-center gap-3">
+                                <span class="fw-800 text-muted ms-2">3</span>
+                                <img src="https://i.pravatar.cc/150?u=c" class="rounded-circle" width="35" height="35">
+                                <span class="small fw-bold text-muted">Aung Kaung</span>
+                            </div>
+                            <span class="text-muted small fw-bold">10.8k XP</span>
+                        </div>
+                    </div>
+                    <hr class="my-4 opacity-10">
+                    <button class="btn btn-link text-decoration-none w-100 fw-bold small">Full Leaderboard</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-custom bg-dark text-white pt-5 pb-4 mt-5">
+        <div class="container text-center">
+            <h3 class="logo-brand text-white fw-800 mb-3">Burma<span>JoyNet</span></h3>
+            <p class="small text-muted mb-0">Spread Joy. Complete Quests. Win Rewards. © 2026</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loading-screen');
+            if (loader) {
+                setTimeout(() => {
+                    loader.style.opacity = '0';
+                    setTimeout(() => loader.style.display = 'none', 300);
+                }, 400); 
+            }
+        });
+    </script>
+</body>
+</html>

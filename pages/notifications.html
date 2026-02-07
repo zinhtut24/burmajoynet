@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications | BurmaJoyNet</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-light">
+
+    <div id="loading-screen">
+        <div class="loader-content text-center">
+            <div class="spinner-joy"></div>
+            <h3 class="mt-4 fw-800 logo-brand">Burma<span>JoyNet</span></h3>
+            <p class="text-muted italic">"Catching up with your joy..."</p>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top main-nav shadow-sm bg-white">
+        <div class="container">
+            <a class="navbar-brand logo-brand fw-800" href="../index.html">Burma<span>JoyNet</span></a>
+            <div class="ms-auto d-flex align-items-center gap-3">
+                <a href="home-feed.html" class="btn btn-outline-primary btn-sm rounded-pill px-3 fw-bold">
+                    <i class="bi bi-house-door me-1"></i> Dashboard
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                
+                <div class="d-flex justify-content-between align-items-center mb-4" data-aos="fade-down">
+                    <div>
+                        <h3 class="fw-800 mb-0">Notifications</h3>
+                        <p class="text-muted small">Stay updated with your community activity</p>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-white border rounded-pill px-3 btn-sm shadow-sm dropdown-toggle fw-bold" data-bs-toggle="dropdown">
+                            Filter
+                        </button>
+                        <ul class="dropdown-menu border-0 shadow-lg rounded-4 p-2">
+                            <li><a class="dropdown-item rounded-3 active" href="#">All Notifications</a></li>
+                            <li><a class="dropdown-item rounded-3" href="#">Unread</a></li>
+                            <li><a class="dropdown-item rounded-3" href="#">Mentions</a></li>
+                            <li><hr class="dropdown-divider opacity-50"></li>
+                            <li><a class="dropdown-item rounded-3 text-primary" href="#" onclick="markAllRead()">Mark all as read</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm rounded-5 overflow-hidden bg-white" data-aos="fade-up">
+                    <div class="list-group list-group-flush">
+                        
+                        <div class="list-group-item p-4 border-0 notification-item unread transition-all">
+                            <div class="d-flex gap-3">
+                                <div class="notif-icon bg-warning-soft text-warning rounded-circle flex-shrink-0">
+                                    <i class="bi bi-stars"></i>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-1 fw-bold">Points Earned! <span class="badge bg-warning text-dark ms-2 x-small">New</span></h6>
+                                    <p class="small text-muted mb-2">You just earned <span class="fw-bold text-dark">+50 Joy Points</span> for completing the "Say Hi to AI Buddy" challenge.</p>
+                                    <small class="text-primary fw-bold">2 minutes ago</small>
+                                </div>
+                                <div class="unread-dot bg-primary rounded-circle"></div>
+                            </div>
+                        </div>
+
+                        <div class="list-group-item p-4 border-0 notification-item transition-all border-top">
+                            <div class="d-flex gap-3">
+                                <div class="position-relative flex-shrink-0">
+                                    <img src="https://i.pravatar.cc/150?u=thura" class="rounded-circle" width="48" height="48">
+                                    <div class="notif-sub-icon bg-primary text-white"><i class="bi bi-person-plus-fill"></i></div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-1 fw-bold">Thura Joy</h6>
+                                    <p class="small text-muted mb-3">Sent you a friend request. Do you want to grow your joy circle together?</p>
+                                    <div class="d-flex gap-2">
+                                        <button class="btn btn-primary btn-sm rounded-pill px-4 fw-bold">Accept</button>
+                                        <button class="btn btn-light btn-sm rounded-pill px-4 fw-bold">Decline</button>
+                                    </div>
+                                    <small class="text-muted d-block mt-2">1 hour ago</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="list-group-item p-4 border-0 notification-item transition-all border-top">
+                            <div class="d-flex gap-3">
+                                <div class="position-relative flex-shrink-0">
+                                    <img src="https://i.pravatar.cc/150?u=melody" class="rounded-circle" width="48" height="48">
+                                    <div class="notif-sub-icon bg-danger text-white"><i class="bi bi-heart-fill"></i></div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-1 fw-bold">Melody Bot <span class="fw-normal text-muted">and 12 others</span></h6>
+                                    <p class="small text-muted mb-0">Liked your video: <span class="fw-bold text-dark">"Morning Vibes in Yangon"</span></p>
+                                    <small class="text-muted d-block mt-2">Yesterday, 10:45 PM</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="list-group-item p-4 border-0 notification-item transition-all border-top">
+                            <div class="d-flex gap-3">
+                                <div class="notif-icon bg-info-soft text-info rounded-circle flex-shrink-0">
+                                    <i class="bi bi-megaphone-fill"></i>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-1 fw-bold">System Update v1.0.4</h6>
+                                    <p class="small text-muted mb-0">We've added new Joy Challenges and improved AI Buddy's response speed. Check them out!</p>
+                                    <small class="text-muted d-block mt-2">Feb 5, 2026</small>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card-footer bg-white border-0 p-4 text-center">
+                        <button class="btn btn-link text-decoration-none fw-bold text-primary">View Older Notifications</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-5 text-center">
+        <p class="small text-muted mb-0">© 2026 BurmaJoyNet Notifications Hub</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+        
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loading-screen');
+            if (loader) {
+                setTimeout(() => {
+                    loader.style.opacity = '0';
+                    setTimeout(() => loader.style.display = 'none', 300);
+                }, 400); 
+            }
+        });
+
+        function markAllRead() {
+            const items = document.querySelectorAll('.notification-item.unread');
+            const dots = document.querySelectorAll('.unread-dot');
+            items.forEach(item => item.classList.remove('unread'));
+            dots.forEach(dot => dot.style.display = 'none');
+            alert("All notifications marked as read! ✔️");
+        }
+    </script>
+</body>
+</html>

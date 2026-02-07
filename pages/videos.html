@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joy Videos | BurmaJoyNet Feed</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-light">
+
+    <div id="loading-screen">
+        <div class="loader-content text-center">
+            <div class="spinner-joy"></div>
+            <h3 class="mt-4 fw-800 logo-brand">Burma<span>JoyNet</span></h3>
+            <p class="text-muted italic">"Tuning into joy..."</p>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top main-nav shadow-sm bg-white">
+        <div class="container">
+            <a class="navbar-brand logo-brand fw-800" href="../index.html">Burma<span>JoyNet</span></a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#videoNav">
+                <i class="bi bi-grid-3x3-gap-fill text-primary"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="videoNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-3">
+                    <li class="nav-item"><a class="nav-link px-3" href="home-feed.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="clubs.html">Clubs</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 active text-primary fw-bold" href="videos.html">Videos</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="challenges.html">Challenges</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <button class="btn btn-joy-primary rounded-pill px-4 shadow-sm" data-bs-toggle="modal" data-bs-target="#uploadVideoModal">
+                            <i class="bi bi-plus-lg me-1"></i> Upload
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="video-hero py-5 bg-dark text-white position-relative overflow-hidden">
+        <div class="container py-4 position-relative z-index-1" data-aos="fade-up">
+            <div class="row align-items-center text-center text-lg-start">
+                <div class="col-lg-7">
+                    <h1 class="display-4 fw-800 mb-3">Watch & <span class="text-primary text-gradient">Feel Good.</span></h1>
+                    <p class="lead opacity-75 mb-4">Explore short videos designed to brighten your day.</p>
+                    <div class="category-scroll d-flex gap-2 overflow-x-auto pb-3 no-scrollbar">
+                        <button class="btn btn-sm btn-primary rounded-pill px-4">Trending</button>
+                        <button class="btn btn-sm btn-outline-light rounded-pill px-4">Comedy</button>
+                        <button class="btn btn-sm btn-outline-light rounded-pill px-4">Nature</button>
+                        <button class="btn btn-sm btn-outline-light rounded-pill px-4">Music</button>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block text-center">
+                    <div class="hero-video-icon shadow-glow pulse-animation">
+                        <i class="bi bi-play-circle-fill display-1 text-primary"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <h4 class="fw-800 mb-4" data-aos="fade-up">Recommended for You</h4>
+
+        <div class="row g-4" id="video-grid">
+            
+            <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden video-card-pro bg-white h-100">
+                    <div class="position-relative thumb-wrapper">
+                        <a href="video-watch.html">
+                            <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=600" class="card-img-top video-preview-img" alt="Bagan">
+                        </a>
+                        <div class="video-duration position-absolute bottom-0 end-0 m-3 px-2 py-1 bg-dark bg-opacity-75 text-white rounded small x-small">0:58</div>
+                        <div class="play-overlay position-absolute top-50 start-50 translate-middle opacity-0 transition-all">
+                            <a href="video-watch.html" class="btn btn-white rounded-circle p-3 shadow-lg"><i class="bi bi-play-fill fs-3"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-body p-3">
+                        <a href="video-watch.html" class="text-decoration-none text-dark"><h6 class="fw-bold mb-2 text-truncate">Peaceful Bagan Sunset 🌅</h6></a>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="https://i.pravatar.cc/150?u=thura" class="rounded-circle" width="25" height="25">
+                                <span class="small text-muted fw-bold">Thura Joy</span>
+                            </div>
+                            <div class="small text-muted"><i class="bi bi-heart-fill text-danger me-1"></i> 1.2k</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden video-card-pro bg-white h-100">
+                    <div class="position-relative thumb-wrapper">
+                        <a href="video-watch.html">
+                            <img src="https://images.unsplash.com/photo-1514525253361-b59fe59b075e?auto=format&fit=crop&w=600" class="card-img-top video-preview-img" alt="Music">
+                        </a>
+                        <div class="video-duration position-absolute bottom-0 end-0 m-3 px-2 py-1 bg-dark bg-opacity-75 text-white rounded small x-small">0:30</div>
+                        <div class="play-overlay position-absolute top-50 start-50 translate-middle opacity-0 transition-all">
+                            <a href="video-watch.html" class="btn btn-white rounded-circle p-3 shadow-lg"><i class="bi bi-play-fill fs-3"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-body p-3">
+                        <a href="video-watch.html" class="text-decoration-none text-dark"><h6 class="fw-bold mb-2 text-truncate">Classical Piano Morning 🎹</h6></a>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="https://i.pravatar.cc/150?u=melody" class="rounded-circle" width="25" height="25">
+                                <span class="small text-muted fw-bold">Melody Bot</span>
+                            </div>
+                            <div class="small text-muted"><i class="bi bi-heart-fill text-danger me-1"></i> 840</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden video-card-pro bg-white h-100">
+                    <div class="position-relative thumb-wrapper">
+                        <a href="video-watch.html">
+                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600" class="card-img-top video-preview-img" alt="Food">
+                        </a>
+                        <div class="video-duration position-absolute bottom-0 end-0 m-3 px-2 py-1 bg-dark bg-opacity-75 text-white rounded small x-small">1:15</div>
+                        <div class="play-overlay position-absolute top-50 start-50 translate-middle opacity-0 transition-all">
+                            <a href="video-watch.html" class="btn btn-white rounded-circle p-3 shadow-lg"><i class="bi bi-play-fill fs-3"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-body p-3">
+                        <a href="video-watch.html" class="text-decoration-none text-dark"><h6 class="fw-bold mb-2 text-truncate">My Favorite Shan Noodle 🍜</h6></a>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="https://i.pravatar.cc/150?u=shan" class="rounded-circle" width="25" height="25">
+                                <span class="small text-muted fw-bold">Foodie Girl</span>
+                            </div>
+                            <div class="small text-muted"><i class="bi bi-heart-fill text-danger me-1"></i> 2.5k</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden video-card-pro bg-white h-100">
+                    <div class="position-relative thumb-wrapper">
+                        <a href="video-watch.html">
+                            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600" class="card-img-top video-preview-img" alt="Nature">
+                        </a>
+                        <div class="video-duration position-absolute bottom-0 end-0 m-3 px-2 py-1 bg-dark bg-opacity-75 text-white rounded small x-small">0:45</div>
+                        <div class="play-overlay position-absolute top-50 start-50 translate-middle opacity-0 transition-all">
+                            <a href="video-watch.html" class="btn btn-white rounded-circle p-3 shadow-lg"><i class="bi bi-play-fill fs-3"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-body p-3">
+                        <a href="video-watch.html" class="text-decoration-none text-dark"><h6 class="fw-bold mb-2 text-truncate">Deep Forest Walk 🌲</h6></a>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="https://i.pravatar.cc/150?u=nature" class="rounded-circle" width="25" height="25">
+                                <span class="small text-muted fw-bold">GreenSoul</span>
+                            </div>
+                            <div class="small text-muted"><i class="bi bi-heart-fill text-danger me-1"></i> 1.1k</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden video-card-pro bg-white h-100">
+                    <div class="position-relative thumb-wrapper">
+                        <a href="video-watch.html">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600" class="card-img-top video-preview-img" alt="Comedy">
+                        </a>
+                        <div class="video-duration position-absolute bottom-0 end-0 m-3 px-2 py-1 bg-dark bg-opacity-75 text-white rounded small x-small">0:20</div>
+                        <div class="play-overlay position-absolute top-50 start-50 translate-middle opacity-0 transition-all">
+                            <a href="video-watch.html" class="btn btn-white rounded-circle p-3 shadow-lg"><i class="bi bi-play-fill fs-3"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-body p-3">
+                        <a href="video-watch.html" class="text-decoration-none text-dark"><h6 class="fw-bold mb-2 text-truncate">Funny Cat Moments 😹</h6></a>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <img src="https://i.pravatar.cc/150?u=cat" class="rounded-circle" width="25" height="25">
+                                <span class="small text-muted fw-bold">JoyfulPets</span>
+                            </div>
+                            <div class="small text-muted"><i class="bi bi-heart-fill text-danger me-1"></i> 5.6k</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+            <button class="btn btn-white border shadow-sm rounded-pill px-5 py-2 fw-bold text-muted">Load More Clips</button>
+        </div>
+    </main>
+
+    <footer class="footer-custom bg-dark text-white pt-5 pb-4">
+        <div class="container text-center">
+            <h3 class="logo-brand text-white fw-800 mb-3">Burma<span>JoyNet</span></h3>
+            <p class="small text-muted mb-0">© 2026 BurmaJoyNet. Share Joy. Feel Happy.</p>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="uploadVideoModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 rounded-5 shadow-lg p-3">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="fw-800 m-0">Share Your Joy</h5>
+                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4 text-center">
+                    <i class="bi bi-cloud-arrow-up display-1 text-primary mb-3"></i>
+                    <p class="text-muted">Upload a video to earn +500 Joy Points!</p>
+                    <button class="btn btn-joy-primary w-100 rounded-pill py-3 fw-bold">Select File</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 200, once: true });
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loading-screen');
+            if (loader) {
+                setTimeout(() => {
+                    loader.style.opacity = '0';
+                    setTimeout(() => loader.style.display = 'none', 200);
+                }, 100); 
+            }
+        });
+    </script>
+</body>
+</html>

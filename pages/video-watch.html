@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watching: Sunset in Bagan | BurmaJoyNet</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-dark text-white">
+
+    <div id="loading-screen" class="bg-dark">
+        <div class="loader-content text-center">
+            <div class="spinner-joy border-primary"></div>
+            <h3 class="mt-4 fw-800 logo-brand text-white">Burma<span>JoyNet</span></h3>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top main-nav shadow-sm bg-dark border-bottom border-secondary border-opacity-25">
+        <div class="container">
+            <a class="navbar-brand logo-brand fw-800 text-white" href="../index.html">Burma<span>JoyNet</span></a>
+            <div class="ms-auto d-flex align-items-center gap-3">
+                <a href="videos.html" class="btn btn-outline-light btn-sm rounded-pill px-3">
+                    <i class="bi bi-arrow-left me-1"></i> Back to Feed
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="video-container rounded-5 overflow-hidden shadow-lg bg-black mb-4 position-relative" data-aos="zoom-in">
+                    <video id="main-video" class="w-100" controls poster="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1200">
+                        <source src="../assets/videos/sample.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div class="video-info bg-white bg-opacity-10 p-4 rounded-5 mb-4" data-aos="fade-up">
+                    <div class="d-flex justify-content-between align-items-start flex-wrap gap-3">
+                        <div>
+                            <h3 class="fw-800 mb-1">Beautiful Sunset at Bagan 🌅</h3>
+                            <p class="text-muted small">1,240 views • Premiered on Feb 7, 2026</p>
+                        </div>
+                        <div class="video-actions d-flex gap-2">
+                            <button class="btn btn-joy-primary rounded-pill px-4 fw-bold" onclick="toggleLike(this)">
+                                <i class="bi bi-heart me-1"></i> 1.2k
+                            </button>
+                            <button class="btn btn-warning rounded-pill px-4 fw-800 text-dark" onclick="sendTip()">
+                                <i class="bi bi-gem me-1"></i> Send Tip
+                            </button>
+                            <button class="btn btn-light bg-opacity-25 border-0 rounded-circle text-white"><i class="bi bi-share"></i></button>
+                        </div>
+                    </div>
+                    <hr class="my-4 border-secondary opacity-25">
+                    
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="https://i.pravatar.cc/150?u=thura" class="rounded-circle" width="50" height="50">
+                            <div>
+                                <h6 class="fw-bold mb-0">Thura Joy</h6>
+                                <small class="text-muted">4.5k Followers</small>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-primary rounded-pill px-4 fw-bold">Follow</button>
+                    </div>
+                </div>
+
+                <div class="comment-section bg-white bg-opacity-10 p-4 rounded-5" data-aos="fade-up">
+                    <h5 class="fw-800 mb-4">Comments (18)</h5>
+                    <div class="d-flex gap-3 mb-4">
+                        <div class="avatar-sm bg-primary rounded-circle flex-shrink-0"></div>
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-transparent border-secondary text-white shadow-none rounded-start-pill" placeholder="Add a comment...">
+                            <button class="btn btn-primary rounded-end-pill px-4">Post</button>
+                        </div>
+                    </div>
+                    <div class="comment-item d-flex gap-3 mb-3">
+                        <img src="https://i.pravatar.cc/150?u=user2" class="rounded-circle" width="35" height="35">
+                        <div>
+                            <h6 class="fw-bold mb-1 small">Zin Htet <span class="text-muted fw-normal ms-2">1h ago</span></h6>
+                            <p class="small mb-0 opacity-75">This is so peaceful! Thanks for sharing. ❤️</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card border-0 shadow-sm rounded-5 bg-joy-gradient text-white p-4 mb-4" data-aos="fade-left">
+                    <h6 class="fw-800 mb-3 small opacity-75"><i class="bi bi-robot me-2"></i>AI INSIGHT</h6>
+                    <p class="small mb-0">"This video has a <b>95% Serenity Score</b>. It's perfect for reducing your current stress level."</p>
+                </div>
+
+                <h6 class="fw-800 mb-3 text-uppercase small opacity-50 tracking-wider">Up Next</h6>
+                <div class="up-next-list">
+                    <a href="#" class="text-decoration-none d-flex gap-3 mb-3 p-2 rounded-4 hover-bg-dark transition-all">
+                        <div class="thumb-mini rounded-3 overflow-hidden" style="width: 120px; height: 70px;">
+                            <img src="https://picsum.photos/seed/travel/120/70" class="w-100 h-100 object-fit-cover">
+                        </div>
+                        <div>
+                            <h6 class="fw-bold text-white small mb-1 line-clamp-2">Exploring Inle Lake 🛶</h6>
+                            <small class="text-muted x-small">Travel Myanmar • 800 views</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-4 text-center border-top border-secondary border-opacity-25">
+        <p class="small text-muted mb-0">© 2026 BurmaJoyNet Video Theater. Experience the Joy.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loading-screen');
+            if (loader) {
+                setTimeout(() => {
+                    loader.style.opacity = '0';
+                    setTimeout(() => loader.style.display = 'none', 200);
+                }, 100); 
+            }
+        });
+
+        function toggleLike(btn) {
+            btn.classList.toggle('btn-joy-primary');
+            btn.classList.toggle('btn-danger');
+            const icon = btn.querySelector('i');
+            icon.classList.toggle('bi-heart');
+            icon.classList.toggle('bi-heart-fill');
+        }
+
+        function sendTip() {
+            const amount = prompt("Enter Joy Points to tip this creator:", "100");
+            if (amount) alert("Successfully tipped " + amount + " Joy Points to Thura Joy! 💎");
+        }
+    </script>
+</body>
+</html>

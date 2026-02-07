@@ -1,15 +1,21 @@
 // Initialize AOS
-AOS.init({ duration: 1000, once: true });
+AOS.init({ duration: 200, once: true });
 
-// Page Loader
+
+
+// Page Load ဖြစ်တာနဲ့ Loading Screen ကို ဖယ်ပေးမယ့် Logic
 window.addEventListener('load', () => {
     const loader = document.getElementById('loading-screen');
-    setTimeout(() => {
-        loader.style.opacity = '0';
-        setTimeout(() => loader.style.display = 'none', 600);
-    }, 1200);
+    if (loader) {
+        // အချိန်ကို ၁ စက္ကန့်လောက်ပဲ ထားလိုက်မယ် (မြန်မြန်တက်လာအောင်)
+        setTimeout(() => {
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 100); // fade out animation အတွက် 0.3s စောင့်မယ်
+        }, 200); 
+    }
 });
-
 // Mood Configuration Data
 const moodEngine = {
     'happy': {
