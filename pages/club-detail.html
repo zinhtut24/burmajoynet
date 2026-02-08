@@ -3,205 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Melody Seekers Hub | BurmaJoyNet</title>
+    <title id="page-title">Community Hub | BurmaJoyNet</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+        :root { --joy-purple: #4f46e5; --joy-bg: #f8fafc; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--joy-bg); color: #1e293b; }
+        
+        /* Navbar & Header */
+        .navbar-brand span { color: var(--joy-purple); }
+        .club-cover-wrapper { height: 380px; position: relative; background: #0f172a; overflow: hidden; }
+        .club-cover-wrapper img { transition: 0.5s; filter: brightness(0.7); }
+        
+        /* Post Box */
+        .upload-card { border: none; border-radius: 16px; background: white; }
+        .post-input { border: none; background: #f1f5f9; border-radius: 12px; padding: 15px; font-size: 0.95rem; }
+        .post-input:focus { background: #e2e8f0; box-shadow: none; }
+        
+        /* Custom Buttons */
+        .btn-joy-primary { background: var(--joy-purple); color: white; border-radius: 10px; font-weight: 700; transition: 0.3s; padding: 10px 20px; border: none; }
+        .btn-joy-primary:hover { background: #4338ca; transform: translateY(-2px); color: white; }
+        .action-btn { color: #64748b; font-weight: 600; font-size: 0.85rem; padding: 8px 12px; border-radius: 8px; transition: 0.2s; border: none; background: none; }
+        .action-btn:hover { background: #f1f5f9; color: var(--joy-purple); }
+
+        /* Media Preview */
+        #media-preview-container img, #media-preview-container video { 
+            max-height: 300px; width: auto; border-radius: 10px; margin-top: 10px; 
+        }
+
+        footer { background: white; border-top: 1px solid #e2e8f0; margin-top: 50px; }
+    </style>
 </head>
-<body class="bg-light">
+<body>
 
-    <div id="loading-screen">
-        <div class="loader-content text-center">
-            <div class="spinner-joy"></div>
-            <h3 class="mt-4 fw-800 logo-brand">Burma<span>JoyNet</span></h3>
-            <p class="text-muted">Syncing with your community...</p>
-        </div>
-    </div>
-
-    <nav class="navbar navbar-expand-lg sticky-top main-nav shadow-sm">
+    <nav class="navbar navbar-expand-lg sticky-top bg-white border-bottom shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-800 logo-brand" href="../index.html">Burma<span>JoyNet</span></a>
-            <div class="ms-auto d-flex align-items-center gap-3">
-                <a href="clubs.html" class="btn btn-outline-secondary btn-sm rounded-pill d-none d-md-block fw-bold">Exit Club</a>
-                <div class="user-profile-mini p-1 px-2 rounded-pill bg-white border d-flex align-items-center gap-2">
-                    <span class="small fw-bold">Zin Htet</span>
-                    <div class="avatar-sm bg-primary text-white rounded-circle d-flex align-items-center justify-content-center">Z</div>
+            <a class="navbar-brand fw-800 fs-4" href="../index.html">Burma<span>JoyNet</span></a>
+            <div class="ms-auto" id="user-area">
                 </div>
-            </div>
         </div>
     </nav>
 
-    <div class="club-profile-header bg-white shadow-sm pb-1">
-        <div class="club-cover-img overflow-hidden position-relative" style="height: 250px;">
-            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1500" alt="Cover" class="w-100 h-100 object-fit-cover">
-        </div>
-        <div class="container position-relative">
-            <div class="club-avatar shadow-lg border border-4 border-white rounded-4 overflow-hidden position-absolute" style="width: 140px; height: 140px; bottom: -40px; left: 20px; z-index: 5;">
-                <img src="https://picsum.photos/seed/music/200" alt="Avatar" class="w-100 h-100">
+    <div class="club-cover-wrapper d-flex align-items-end">
+        <img id="club-cover" src="" class="position-absolute w-100 h-100 object-fit-cover" alt="Cover">
+        <div class="container position-relative pb-5 text-white">
+            <span id="club-category" class="badge bg-primary mb-3 rounded-pill px-3 py-2">Category</span>
+            <h1 id="club-name-display" class="fw-800 display-3 mb-2">Loading...</h1>
+            <div class="d-flex align-items-center gap-3">
+                <span><i class="bi bi-people-fill me-2"></i><span id="member-count">0</span> Members</span>
+                <span class="opacity-50">|</span>
+                <span><i class="bi bi-patch-check-fill text-info me-1"></i> Verified Community</span>
             </div>
-            <div class="club-info-row d-flex flex-column flex-md-row justify-content-between align-items-end pt-3 ps-md-5 ms-md-5">
-                <div class="ms-md-5 mt-5 mt-md-0 text-center text-md-start">
-                    <h2 class="fw-800 mb-1">Melody Seekers <i class="bi bi-patch-check-fill text-primary small"></i></h2>
-                    <p class="text-muted small mb-2"><i class="bi bi-geo-alt"></i> Yangon, Myanmar • 1.5k Members</p>
-                </div>
-                <div class="d-flex gap-2 mb-2">
-                    <button class="btn btn-joy-primary rounded-pill px-4 fw-bold" onclick="alert('Post feature coming soon!')"><i class="bi bi-plus-lg me-1"></i> Post to Feed</button>
-                    <button class="btn btn-light rounded-circle shadow-sm" onclick="alert('Link copied to clipboard!')"><i class="bi bi-share"></i></button>
-                </div>
-            </div>
-            
-            <ul class="nav nav-pills mt-4 club-tabs border-top pt-2" id="clubTabs" role="tablist">
-                <li class="nav-item"><button class="nav-link active fw-bold" data-bs-toggle="pill" data-bs-target="#feed"><i class="bi bi-grid-fill me-2"></i>Feed</button></li>
-                <li class="nav-item"><button class="nav-link fw-bold" data-bs-toggle="pill" data-bs-target="#videos"><i class="bi bi-play-btn-fill me-2"></i>Videos</button></li>
-                <li class="nav-item"><button class="nav-link fw-bold" data-bs-toggle="pill" data-bs-target="#members"><i class="bi bi-people me-2"></i>Members</button></li>
-            </ul>
         </div>
     </div>
 
     <main class="container py-5">
         <div class="row g-4">
             <div class="col-lg-4">
-                <div class="card border-0 shadow-sm rounded-4 p-4 mb-4" data-aos="fade-right">
-                    <h6 class="fw-800 mb-3 text-uppercase small tracking-wider">About Club</h6>
-                    <p class="small text-muted mb-4">Sharing the joy of music through local talent highlights, playlist sharing, and weekend jam sessions. Join us to find your sound!</p>
-                    <div class="d-flex align-items-center gap-2 mb-2">
-                        <i class="bi bi-globe text-primary"></i> <span class="small fw-bold">Public Community</span>
-                    </div>
-                    <div class="d-flex align-items-center gap-2">
-                        <i class="bi bi-lightning-fill text-warning"></i> <span class="small fw-bold">Happiness Score: 98%</span>
-                    </div>
+                <div class="card upload-card shadow-sm p-4 mb-4">
+                    <h5 class="fw-800 mb-3">Community Info</h5>
+                    <p id="club-desc" class="text-muted small leading-relaxed">Loading details about this circle...</p>
+                    <hr class="my-4 opacity-10">
+                    <button id="join-btn" class="btn btn-joy-primary w-100" onclick="handleJoin()">Join Community</button>
                 </div>
 
-                <div class="card border-0 shadow-sm rounded-4 bg-joy-gradient text-white p-4" data-aos="fade-right">
-                    <h6 class="fw-800 mb-3"><i class="bi bi-robot me-2"></i>Club AI Buddy</h6>
-                    <p class="small opacity-75 mb-4">Hello! I'm the Melody Bot. Ask me anything about music trends or club events!</p>
-                    <div class="input-group input-group-sm">
-                        <input type="text" id="ai-input" class="form-control border-0 bg-white bg-opacity-25 text-white placeholder-white shadow-none" placeholder="Ask Buddy...">
-                        <button class="btn btn-white text-primary fw-bold" onclick="askAIBuddy()">Ask</button>
+                <div class="card upload-card shadow-sm p-4 bg-white border-0">
+                    <h6 class="fw-800 small text-uppercase text-muted mb-3">Community Rules</h6>
+                    <div class="small">
+                        <p class="mb-2"><i class="bi bi-shield-lock me-2 text-primary"></i> <b>Safe Space:</b> No hate speech allowed.</p>
+                        <p class="mb-2"><i class="bi bi-lightning-charge me-2 text-warning"></i> <b>Stay Active:</b> Share your joy weekly.</p>
+                        <p class="mb-0"><i class="bi bi-heart me-2 text-danger"></i> <b>Be Kind:</b> Support other creators.</p>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-8">
-                <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="feed" role="tabpanel">
-                        <div class="card border-0 shadow-sm rounded-4 mb-4 overflow-hidden post-card" data-aos="fade-up">
-                            <div class="card-body p-4">
-                                <div class="d-flex align-items-center gap-3 mb-3">
-                                    <img src="https://i.pravatar.cc/150?u=user1" class="rounded-circle" width="45" height="45">
-                                    <div>
-                                        <h6 class="fw-bold mb-0 small">Htet Myat</h6>
-                                        <small class="text-muted">2 hours ago</small>
-                                    </div>
-                                </div>
-                                <p class="mb-3">Just found this amazing Burmese underground band. Check them out! 🎸✨</p>
-                                <div class="post-media rounded-4 overflow-hidden border mb-3">
-                                    <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=800" class="w-100">
-                                </div>
-                                <div class="d-flex gap-4 border-top pt-3 post-actions">
-                                    <button class="btn btn-link text-decoration-none p-0 text-dark small fw-bold" onclick="toggleLike(this)">
-                                        <i class="bi bi-heart me-1"></i> <span class="like-count">124</span> Likes
-                                    </button>
-                                    <button class="btn btn-link text-decoration-none p-0 text-dark small fw-bold" onclick="toggleComment(this)">
-                                        <i class="bi bi-chat me-1"></i> 18 Comments
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                <div id="post-creator" class="card upload-card shadow-sm p-4 mb-4 d-none">
+                    <div class="d-flex gap-3 mb-3">
+                        <div id="user-initial" class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 48px; height: 48px; min-width: 48px;">U</div>
+                        <textarea id="post-text" class="form-control post-input shadow-none" placeholder="Share a photo, video or a thought..." rows="2"></textarea>
                     </div>
-                    <div class="tab-pane fade text-center py-5" id="videos"><h4>Coming Soon: Video Library</h4></div>
-                    <div class="tab-pane fade text-center py-5" id="members"><h4>Coming Soon: Member List</h4></div>
+                    
+                    <div id="media-preview-container" class="mb-3"></div>
+
+                    <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                        <div class="d-flex gap-1">
+                            <button class="btn action-btn" onclick="document.getElementById('file-input').click()">
+                                <i class="bi bi-camera-reels me-2 text-success"></i> Media
+                            </button>
+                            <input type="file" id="file-input" class="d-none" accept="image/*,video/*" onchange="previewMedia(event)">
+                        </div>
+                        <button class="btn btn-joy-primary px-4" onclick="createPost()">Post to Feed</button>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h5 class="fw-800 mb-0">New to Feed</h5>
+                    <select class="form-select form-select-sm border-0 bg-light shadow-none w-auto">
+                        <option>Most Recent</option>
+                        <option>Popular</option>
+                    </select>
+                </div>
+
+                <div id="dynamic-posts">
+                    <div class="card upload-card shadow-sm p-4 mb-3 border-0">
+                        <p class="text-muted text-center my-4">No posts yet. Be the first to share something!</p>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="footer-custom bg-dark text-white pt-5 pb-4 mt-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-5">
-                    <h3 class="logo-brand text-white fw-800 mb-3">Burma<span>JoyNet</span></h3>
-                    <p class="small text-muted mb-4 pe-lg-5">Connecting people through passion. BurmaJoyNet is your digital home for happiness and meaningful community engagement.</p>
-                </div>
-                <div class="col-lg-3 col-6">
-                    <h6 class="fw-bold mb-4">Navigation</h6>
-                    <ul class="list-unstyled small">
-                        <li class="mb-2"><a href="home-feed.html" class="text-muted text-decoration-none">Dashboard</a></li>
-                        <li class="mb-2"><a href="clubs.html" class="text-muted text-decoration-none">Explore Clubs</a></li>
-                        <li><a href="ai-buddy.html" class="text-muted text-decoration-none">Talk to AI</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4">
-                    <h6 class="fw-bold mb-4">Stay Joyful</h6>
-                    <div class="d-flex gap-3 h4">
-                        <i class="bi bi-facebook opacity-50"></i>
-                        <i class="bi bi-instagram opacity-50"></i>
-                        <i class="bi bi-youtube opacity-50"></i>
-                    </div>
-                </div>
+    <footer class="py-5">
+        <div class="container text-center">
+            <h4 class="fw-800 mb-4">Burma<span>JoyNet</span></h4>
+            <div class="d-flex justify-content-center gap-4 mb-4">
+                <a href="#" class="text-muted text-decoration-none small">About</a>
+                <a href="#" class="text-muted text-decoration-none small">Guidelines</a>
+                <a href="#" class="text-muted text-decoration-none small">Support</a>
             </div>
-            <hr class="my-5 border-secondary opacity-25">
-            <p class="text-center small text-muted mb-0">© 2026 BurmaJoyNet. All Rights Reserved.</p>
+            <p class="text-muted x-small">© 2026 BurmaJoyNet Hub. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // ၁။ AOS initialization (စာလုံးပေါင်း မှန်အောင် ပြင်ထားသည်)
-        AOS.init({ 
-            duration: 200, 
-            once: true 
-        });
+        // ၁။ Global State
+        let currentUser = localStorage.getItem('currentUser');
+        let isJoined = false;
 
-        // ၂။ Loading Screen Logic (ပိုမြန်အောင် ပြင်ထားသည်)
-        window.addEventListener('load', () => {
-            const loader = document.getElementById('loading-screen');
-            
-            // Page load ဖြစ်တာနဲ့ ချက်ချင်း ပျောက်အောင် လုပ်မယ်
-            if (loader) {
-                loader.style.opacity = '0';
-                loader.style.transition = 'opacity 0.3s ease'; // ငြိမ့်ငြိမ့်လေး ပျောက်သွားအောင်
-                
-                setTimeout(() => {
-                    loader.style.display = 'none';
-                }, 100); 
-            }
-        });
-
-        // Toggle Like Function
-        function toggleLike(btn) {
-            const icon = btn.querySelector('i');
-            const span = btn.querySelector('.like-count');
-            let count = parseInt(span.innerText);
-            
-            if (icon.classList.contains('bi-heart')) {
-                icon.classList.replace('bi-heart', 'bi-heart-fill');
-                icon.style.color = 'red';
-                span.innerText = count + 1;
+        // ၂။ Initialize Page & Auth
+        function initPage() {
+            // User UI Setup
+            const userArea = document.getElementById('user-area');
+            if (currentUser) {
+                userArea.innerHTML = `
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="text-end d-none d-md-block">
+                            <h6 class="mb-0 fw-bold small">${currentUser}</h6>
+                            <a href="javascript:void(0)" onclick="logout()" class="text-danger x-small text-decoration-none" style="font-size: 11px;">Sign Out</a>
+                        </div>
+                        <div class="bg-dark text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 40px; height: 40px;">
+                            ${currentUser.charAt(0).toUpperCase()}
+                        </div>
+                    </div>`;
+                document.getElementById('user-initial').innerText = currentUser.charAt(0).toUpperCase();
             } else {
-                icon.classList.replace('bi-heart-fill', 'bi-heart');
-                icon.style.color = '';
-                span.innerText = count - 1;
+                userArea.innerHTML = `<a href="login.html" class="btn btn-joy-primary shadow-sm">Login / Register</a>`;
+            }
+
+            // Data Loading
+            const params = new URLSearchParams(window.location.search);
+            const clubName = params.get('name') || "Melody Seekers";
+            const clubDetails = {
+                "Melody Seekers": { cat: "Music", members: "1.5k", cover: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200", desc: "For those who find joy in every note. Discuss, share and discover new music daily." },
+                "Burma Pro Gamers": { cat: "Gaming", members: "3.8k", cover: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200", desc: "Connect with the top players in Myanmar. Strategy, news, and daily tournaments." }
+            };
+
+            const data = clubDetails[clubName];
+            if (data) {
+                document.getElementById('club-name-display').innerText = clubName;
+                document.getElementById('club-category').innerText = data.cat;
+                document.getElementById('member-count').innerText = data.members;
+                document.getElementById('club-desc').innerText = data.desc;
+                document.getElementById('club-cover').src = data.cover;
             }
         }
 
-        // AI Buddy Mini-function
-        function askAIBuddy() {
-            const input = document.getElementById('ai-input');
-            if (input && input.value.trim() !== "") {
-                alert("Melody Bot: That's a great question! Let me check the latest music trends for you...");
-                input.value = "";
+        // ၃။ Auth Actions
+        function logout() {
+            localStorage.removeItem('currentUser');
+            window.location.reload();
+        }
+
+        function handleJoin() {
+            if (!currentUser) {
+                alert("You need to login first!");
+                window.location.href = "login.html";
+                return;
+            }
+            isJoined = true;
+            document.getElementById('join-btn').innerText = "Joined ✓";
+            document.getElementById('join-btn').className = "btn btn-success w-100 disabled";
+            document.getElementById('post-creator').classList.remove('d-none');
+        }
+
+        // ၄။ Media Preview Logic
+        function previewMedia(event) {
+            const container = document.getElementById('media-preview-container');
+            container.innerHTML = "";
+            const file = event.target.files[0];
+            if (file) {
+                const url = URL.createObjectURL(file);
+                if (file.type.startsWith('video/')) {
+                    container.innerHTML = `<video src="${url}" controls class="w-100 shadow-sm"></video>`;
+                } else {
+                    container.innerHTML = `<img src="${url}" class="w-100 shadow-sm">`;
+                }
             }
         }
 
-        // Comment Placeholder
-        function toggleComment(btn) {
-            alert("Comment section opening...");
+        // ၅။ Create Post Logic
+        function createPost() {
+            const text = document.getElementById('post-text').value;
+            const fileInput = document.getElementById('file-input');
+            const feed = document.getElementById('dynamic-posts');
+
+            if (!text && !fileInput.files[0]) return;
+
+            let mediaHTML = "";
+            if (fileInput.files[0]) {
+                const url = URL.createObjectURL(fileInput.files[0]);
+                mediaHTML = fileInput.files[0].type.startsWith('video/') 
+                    ? `<video src="${url}" controls class="w-100 rounded-3 mt-3 shadow-sm"></video>` 
+                    : `<img src="${url}" class="w-100 rounded-3 mt-3 shadow-sm">`;
+            }
+
+            const postHTML = `
+                <div class="card upload-card shadow-sm p-4 mb-3 border-0">
+                    <div class="d-flex align-items-center gap-3 mb-3">
+                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 40px; height: 40px;">
+                            ${currentUser.charAt(0).toUpperCase()}
+                        </div>
+                        <div>
+                            <h6 class="mb-0 fw-bold small">${currentUser}</h6>
+                            <small class="text-muted x-small">Just now • <i class="bi bi-globe"></i></small>
+                        </div>
+                    </div>
+                    <p class="mb-0 small text-dark">${text}</p>
+                    ${mediaHTML}
+                    <div class="d-flex gap-4 border-top pt-3 mt-3">
+                        <button class="btn btn-link text-muted text-decoration-none small p-0 fw-bold"><i class="bi bi-heart me-1"></i> Like</button>
+                        <button class="btn btn-link text-muted text-decoration-none small p-0 fw-bold"><i class="bi bi-chat-left-text me-1"></i> Comment</button>
+                    </div>
+                </div>`;
+
+            if (feed.innerHTML.includes('No posts yet')) feed.innerHTML = "";
+            feed.insertAdjacentHTML('afterbegin', postHTML);
+            
+            // Reset Form
+            document.getElementById('post-text').value = "";
+            document.getElementById('file-input').value = "";
+            document.getElementById('media-preview-container').innerHTML = "";
         }
+
+        window.onload = initPage;
     </script>
 </body>
 </html>

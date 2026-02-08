@@ -4,25 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clubs Hub | BurmaJoyNet Communities</title>
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body class="bg-light">
+<body class="mood-default">
 
     <div id="loading-screen">
         <div class="loader-content text-center">
             <div class="spinner-joy"></div>
             <h3 class="mt-4 fw-800 logo-brand">Burma<span>JoyNet</span></h3>
-            <p class="text-muted italic">"Discovering your community..."</p>
+            <p class="text-muted">"Discovering your community..."</p>
         </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg sticky-top main-nav shadow-sm">
+    <nav class="navbar navbar-expand-lg sticky-top main-nav shadow-sm bg-white">
         <div class="container">
             <a class="navbar-brand logo-brand fw-800" href="../index.html">Burma<span>JoyNet</span></a>
             <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#clubNavContent">
@@ -34,8 +32,7 @@
                     <li class="nav-item"><a class="nav-link px-3 active text-primary fw-bold" href="clubs.html">Clubs</a></li>
                     <li class="nav-item"><a class="nav-link px-3" href="videos.html">Videos</a></li>
                     <li class="nav-item"><a class="nav-link px-3" href="challenges.html">Challenges</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="ai-buddy.html">AI Buddy</a></li>
-                    
+                    <li><a href="ai-buddy.html">AI Buddy</a></li>
                     <li class="nav-item d-flex gap-3 px-lg-3 py-2 py-lg-0 border-start border-end border-light">
                         <a href="messages.html" class="nav-link p-0 position-relative">
                             <i class="bi bi-chat-heart fs-5 text-primary"></i>
@@ -43,16 +40,13 @@
                         </a>
                         <a href="notifications.html" class="nav-link p-0"><i class="bi bi-bell fs-5 text-primary"></i></a>
                     </li>
-
                     <li class="nav-item dropdown">
                         <div class="user-profile-mini p-1 px-3 rounded-pill bg-white border d-flex align-items-center gap-2 shadow-sm" data-bs-toggle="dropdown" role="button">
                             <div class="avatar-sm bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold">Z</div>
-                            <span class="small fw-800 d-none d-md-block">Zin Htet</span>
+                            <span class="small fw-800 d-none d-md-block">Ye Yint</span>
                         </div>
                         <ul class="dropdown-menu dropdown-menu-end border-0 shadow-lg rounded-4 mt-2 p-2">
                             <li><a class="dropdown-item rounded-3" href="profile.html"><i class="bi bi-person-circle me-2"></i>My Profile</a></li>
-                            <li><a class="dropdown-item rounded-3" href="wallet.html"><i class="bi bi-wallet2 me-2"></i>Wallet & Earnings</a></li>
-                            <li><a class="dropdown-item rounded-3" href="settings.html"><i class="bi bi-gear me-2"></i>Settings</a></li>
                             <li><hr class="dropdown-divider opacity-50"></li>
                             <li><a class="dropdown-item rounded-3 text-danger" href="../index.html"><i class="bi bi-power me-2"></i>Logout</a></li>
                         </ul>
@@ -62,188 +56,87 @@
         </div>
     </nav>
 
-    <header class="club-header py-5 bg-joy-gradient text-white position-relative overflow-hidden">
-        <div class="container text-center py-4" data-aos="fade-down">
+    <header class="club-header py-5 bg-joy-gradient text-white">
+        <div class="container text-center py-4">
             <h1 class="display-4 fw-800 mb-3">Find Your <span class="text-warning">Circle.</span></h1>
-            <p class="lead opacity-75 mb-5">Join passionate groups, share interests, and grow with the community.</p>
-            <div class="col-md-6 mx-auto">
-                <div class="input-group input-group-lg shadow-lg rounded-pill overflow-hidden border-0">
-                    <span class="input-group-text bg-white border-0 ps-4"><i class="bi bi-search text-primary"></i></span>
-                    <input type="text" class="form-control border-0 shadow-none py-3 px-3" placeholder="Search for Photography, Gaming, Art...">
-                    <button class="btn btn-warning fw-bold px-4 text-dark border-0">Find Clubs</button>
-                </div>
-            </div>
+            <p class="lead opacity-75 mb-5">Join passionate groups and grow with the community.</p>
         </div>
     </header>
 
     <main class="container py-5">
-        
-        <div class="d-flex justify-content-between align-items-center mb-5" data-aos="fade-up">
-            <div>
-                <h3 class="fw-800 mb-1">Explore Communities</h3>
-                <p class="text-muted small">Personalized suggestions for your joy</p>
-            </div>
-            <button class="btn btn-joy-primary rounded-pill px-4 py-2 fw-800 shadow-sm" data-bs-toggle="modal" data-bs-target="#createClubModal">
-                <i class="bi bi-plus-lg me-1"></i> Create New Club
-            </button>
-        </div>
-
         <div class="row g-4">
-            <div class="col-lg-3" data-aos="fade-right">
-                <div class="card border-0 shadow-sm rounded-4 p-4 sticky-top" style="top: 100px; background: rgba(255,255,255,0.8); backdrop-filter: blur(10px);">
-                    <h6 class="fw-800 mb-3 text-uppercase small tracking-wider">Categories</h6>
-                    <div class="category-list d-flex flex-column gap-2">
-                        <a href="#" class="cat-link active px-3 py-2 rounded-3 text-decoration-none">All Communities</a>
-                        <a href="#" class="cat-link px-3 py-2 rounded-3 text-decoration-none text-muted">Music & Arts</a>
-                        <a href="#" class="cat-link px-3 py-2 rounded-3 text-decoration-none text-muted">Tech & Gaming</a>
-                        <a href="#" class="cat-link px-3 py-2 rounded-3 text-decoration-none text-muted">Health & Wellness</a>
-                        <a href="#" class="cat-link px-3 py-2 rounded-3 text-decoration-none text-muted">Education</a>
-                    </div>
-                    <hr class="my-4 opacity-10">
-                    <h6 class="fw-800 mb-3 text-uppercase small tracking-wider">Suggested For You</h6>
-                    <div class="mini-club-card d-flex align-items-center gap-3 mb-3 p-2 bg-white rounded-3 shadow-sm border border-light">
-                        <img src="https://picsum.photos/seed/tech/50" class="rounded-circle" alt="tech">
-                        <div>
-                            <p class="mb-0 fw-bold small">Dev Myanmar</p>
-                            <small class="text-muted x-small">2.4k members</small>
-                        </div>
+            <div class="col-lg-3">
+                <div class="card border-0 shadow-sm rounded-4 p-4 sticky-top" style="top: 100px;">
+                    <h6 class="fw-800 mb-3 text-uppercase small">Categories</h6>
+                    <div class="category-list d-flex flex-column gap-2" id="categoryFilter">
+                        <a href="#" class="cat-link active px-3 py-2 rounded-3 text-decoration-none" data-filter="all">All Communities</a>
+                        <a href="#" class="cat-link px-3 py-2 rounded-3 text-decoration-none text-muted" data-filter="Music">Music & Arts</a>
+                        <a href="#" class="cat-link px-3 py-2 rounded-3 text-decoration-none text-muted" data-filter="Gaming">Tech & Gaming</a>
+                        <a href="#" class="cat-link px-3 py-2 rounded-3 text-decoration-none text-muted" data-filter="Health">Health & Wellness</a>
+                        <a href="#" class="cat-link px-3 py-2 rounded-3 text-decoration-none text-muted" data-filter="Education">Education</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-9">
-                <div class="row g-4" id="club-list">
-                    <div class="col-md-6" data-aos="fade-up">
-                        <div class="card border-0 shadow-sm rounded-4 overflow-hidden club-main-card bg-white h-100">
-                            <div class="position-relative overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600" class="card-img-top hover-zoom" alt="Music">
-                                <span class="badge bg-primary position-absolute top-0 end-0 m-3 rounded-pill px-3 shadow">Music</span>
-                            </div>
-                            <div class="card-body p-4">
-                                <h5 class="fw-800">Melody Seekers</h5>
-                                <p class="text-muted small mb-4 line-clamp-2">A place for music lovers to share playlists, discover local talents and enjoy jam sessions.</p>
-                                <div class="d-flex justify-content-between align-items-center pt-3 border-top border-light">
-                                    <div class="member-count small fw-bold text-muted">
-                                        <i class="bi bi-people-fill text-primary me-1"></i> 1.5k Members
-                                    </div>
-                                    <a href="club-detail.html" class="btn btn-outline-primary btn-sm rounded-pill px-4 fw-bold">Join Club</a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="row g-4" id="club-list-container">
                     </div>
-
-                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card border-0 shadow-sm rounded-4 overflow-hidden club-main-card bg-white h-100">
-                            <div class="position-relative overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600" class="card-img-top hover-zoom" alt="Gaming">
-                                <span class="badge bg-danger position-absolute top-0 end-0 m-3 rounded-pill px-3 shadow">Gaming</span>
-                            </div>
-                            <div class="card-body p-4">
-                                <h5 class="fw-800">Burma Pro Gamers</h5>
-                                <p class="text-muted small mb-4 line-clamp-2">Weekly tournaments, gaming strategies, and a space for pro and casual players to connect.</p>
-                                <div class="d-flex justify-content-between align-items-center pt-3 border-top border-light">
-                                    <div class="member-count small fw-bold text-muted">
-                                        <i class="bi bi-people-fill text-primary me-1"></i> 3.8k Members
-                                    </div>
-                                    <a href="club-detail.html" class="btn btn-outline-primary btn-sm rounded-pill px-4 fw-bold">Join Club</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="text-center mt-5">
-                    <button class="btn btn-white shadow-sm border rounded-pill px-5 py-2 fw-bold text-muted">Load More Communities</button>
-                </div>
             </div>
         </div>
     </main>
 
-    <footer class="footer-custom bg-dark text-white pt-5 pb-4 mt-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-5">
-                    <h3 class="logo-brand text-white fw-800 mb-3">Burma<span>JoyNet</span></h3>
-                    <p class="small text-muted mb-4 pe-lg-5">BurmaJoyNet is your daily mental health companion. We combine hobby-based communities with AI support to build a happier digital world.</p>
-                    <div class="d-flex gap-3 h4">
-                        <a href="#" class="text-white opacity-50"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-white opacity-50"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-white opacity-50"><i class="bi bi-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-6">
-                    <h6 class="fw-bold mb-4">Core Hub</h6>
-                    <ul class="list-unstyled small">
-                        <li class="mb-2"><a href="home-feed.html" class="text-muted text-decoration-none hover-link">Dashboard</a></li>
-                        <li class="mb-2"><a href="clubs.html" class="text-white text-decoration-none fw-bold">All Clubs</a></li>
-                        <li class="mb-2"><a href="videos.html" class="text-muted text-decoration-none hover-link">Video Feed</a></li>
-                        <li><a href="ai-buddy.html" class="text-muted text-decoration-none hover-link">AI Chat</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-6">
-                    <h6 class="fw-bold mb-4">Support</h6>
-                    <ul class="list-unstyled small">
-                        <li class="mb-2"><a href="settings.html" class="text-muted text-decoration-none hover-link">Language</a></li>
-                        <li class="mb-2"><a href="wallet.html" class="text-muted text-decoration-none hover-link">Earnings</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none hover-link">Terms & Policy</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3">
-                    <h6 class="fw-bold mb-4">Join Newsletter</h6>
-                    <div class="input-group">
-                        <input type="email" class="form-control bg-transparent border-secondary text-white rounded-start-pill small shadow-none" placeholder="Email Address">
-                        <button class="btn btn-primary rounded-end-pill px-3"><i class="bi bi-send"></i></button>
-                    </div>
-                </div>
-            </div>
-            <hr class="my-5 border-secondary opacity-25">
-            <p class="text-center small text-muted mb-0">© 2026 BurmaJoyNet. Created for Joy and Happiness.</p>
-        </div>
-    </footer>
-
-    <div class="modal fade" id="createClubModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content border-0 rounded-5 shadow-lg p-3">
-                <div class="modal-header border-0">
-                    <h5 class="fw-800 m-0">Create New Club</h5>
-                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body p-4">
-                    <form>
-                        <div class="mb-3">
-                            <label class="form-label small fw-800 text-muted">CLUB NAME</label>
-                            <input type="text" class="form-control rounded-4 py-3 shadow-none border-light bg-light" placeholder="e.g. Photography Masters">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label small fw-800 text-muted">CATEGORY</label>
-                            <select class="form-select rounded-4 py-3 shadow-none border-light bg-light">
-                                <option>Music & Arts</option>
-                                <option>Tech & Gaming</option>
-                                <option>Health & Wellness</option>
-                                <option>Education</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label small fw-800 text-muted">DESCRIPTION</label>
-                            <textarea class="form-control rounded-4 py-3 shadow-none border-light bg-light" rows="3" placeholder="Explain the joy of your club..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-joy-primary w-100 py-3 rounded-pill fw-800 mt-2 shadow">Launch Community <i class="bi bi-rocket-takeoff ms-1"></i></button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 200, once: true });
-        window.addEventListener('load', () => {
-            const loader = document.getElementById('loading-screen');
-            setTimeout(() => {
-                loader.style.opacity = '0';
-                setTimeout(() => loader.style.display = 'none', 200);
-            }, 100);
+        const clubs = [
+            { id: 1, name: "Melody Seekers", cat: "Music", members: "1.5k", img: "https://picsum.photos/seed/music/600/400", desc: "Share playlists and local talents." },
+            { id: 2, name: "Artistic Souls", cat: "Music", members: "900", img: "https://picsum.photos/seed/art/600/400", desc: "Digital and traditional arts hub." },
+            { id: 3, name: "Guitar Jam", cat: "Music", members: "2.1k", img: "https://picsum.photos/seed/guitar/600/400", desc: "Weekly live jam sessions." },
+            { id: 4, name: "Burma Pro Gamers", cat: "Gaming", members: "3.8k", img: "https://picsum.photos/seed/gaming/600/400", desc: "Weekly tournaments and tips." },
+            { id: 5, name: "Minecraft Builders", cat: "Gaming", members: "1.2k", img: "https://picsum.photos/seed/minecraft/600/400", desc: "Building amazing worlds." },
+            { id: 6, name: "Dota 2 Legends", cat: "Gaming", members: "5.4k", img: "https://picsum.photos/seed/dota/600/400", desc: "Find your perfect team." },
+            { id: 7, name: "Yoga for Joy", cat: "Health", members: "850", img: "https://picsum.photos/seed/yoga/600/400", desc: "Daily mindfulness sessions." },
+            { id: 8, name: "Morning Runners", cat: "Health", members: "1.1k", img: "https://picsum.photos/seed/running/600/400", desc: "Virtual running challenges." },
+            { id: 9, name: "Healthy Bites", cat: "Health", members: "2.3k", img: "https://picsum.photos/seed/food/600/400", desc: "Recipes for a balanced life." },
+            { id: 10, name: "Tech Innovators", cat: "Education", members: "3.1k", img: "https://picsum.photos/seed/code/600/400", desc: "Coding workshops and tech." },
+            { id: 11, name: "English Joy", cat: "Education", members: "4.5k", img: "https://picsum.photos/seed/english/600/400", desc: "Improve your English fun way." },
+            { id: 12, name: "Book Worms", cat: "Education", members: "1.8k", img: "https://picsum.photos/seed/books/600/400", desc: "Monthly book reviews." }
+        ];
+
+        function displayClubs(filter = "all") {
+            const container = document.getElementById('club-list-container');
+            container.innerHTML = "";
+            const filtered = filter === "all" ? clubs : clubs.filter(c => c.cat === filter);
+            
+            filtered.forEach(club => {
+                container.innerHTML += `
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 bg-white">
+                            <img src="${club.img}" class="card-img-top" alt="${club.name}">
+                            <div class="card-body p-4">
+                                <h5 class="fw-800">${club.name}</h5>
+                                <p class="text-muted small">${club.desc}</p>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                                    <span class="small fw-bold text-muted"><i class="bi bi-people-fill text-primary"></i> ${club.members}</span>
+                                    <a href="club-detail.html?name=${encodeURIComponent(club.name)}" class="btn btn-outline-primary btn-sm rounded-pill px-4">View Club</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        document.querySelectorAll('.cat-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelectorAll('.cat-link').forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                displayClubs(link.getAttribute('data-filter'));
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            displayClubs();
+            setTimeout(() => document.getElementById('loading-screen').style.display = 'none', 100);
         });
     </script>
 </body>

@@ -6,6 +6,25 @@
     --tired-bg: linear-gradient(135deg, #f1f5f9 0%, #ffffff 100%);
 }
 
+/* တစ်ခုလုံးရဲ့ Background ကို အဖြူရောင်မှ ပြောင်းလဲခြင်း */
+body {
+    background-color: #f0f4f8 !important; /* Soft Premium Blue-Grey Tint */
+    color: #1e293b; /* စာသားအရောင်ကိုလည်း ပိုပေါ်အောင် ရင့်ရင့်လေးထားမယ် */
+}
+
+/* Card တွေကိုတော့ အဖြူရောင်အတိုင်းထားမှ Background ပေါ်မှာ ကြွတက်လာမှာပါ */
+.card, .glass-card, .glass-widget {
+    background-color: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Navbar ကိုလည်း Background နဲ့ ကွဲအောင် ထားမယ် */
+.main-nav {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(10px); /* ဝါးဝါးလေးနဲ့ လှသွားအောင် */
+}
+
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: #1e293b;
@@ -44,11 +63,46 @@ body {
 /* AI Bot Icon */
 .ai-bot-icon { width: 75px; height: 75px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; }
 
-/* Footer Styling */
-.footer-links a { text-decoration: none; color: #94a3b8; transition: 0.3s; font-size: 0.95rem; display: block; margin-bottom: 0.8rem; }
-.footer-links a:hover { color: var(--primary); padding-left: 5px; }
-.social-links a { color: #94a3b8; transition: 0.3s; }
-.social-links a:hover { color: var(--primary); transform: translateY(-3px); }
+/* New Light Footer Styles */
+.footer-modern {
+    background-color: #fcfdfe; /* အဖြူရောင် ခပ်ဆန်းဆန်းလေး */
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #64748b !important; /* Steel grey color for readability */
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.footer-links li a:hover {
+    color: #4f46e5 !important; /* Hover လုပ်ရင် အပြာရောင်ပြောင်းမယ် */
+    padding-left: 5px;
+}
+
+.social-icon-btn {
+    color: #4f46e5;
+    background: #eef2ff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.social-icon-btn:hover {
+    background: #4f46e5;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.fw-500 { font-weight: 500; }
+.tracking-wider { letter-spacing: 0.05em; }
+  
 
 /* Loading & Floating Buddy */
 #loading-screen { position: fixed; inset: 0; background: white; z-index: 9999; display: flex; align-items: center; justify-content: center; transition: 0.6s; }
@@ -607,3 +661,35 @@ body {
 .cursor-pointer { cursor: pointer; }
 
 .bg-primary-soft { background-color: rgba(79, 70, 229, 0.1); color: #4f46e5; }
+
+
+/* Admin Layout */
+.admin-sidebar {
+    width: 260px;
+    min-width: 260px;
+    transition: all 0.3s;
+}
+
+.admin-sidebar .nav-link {
+    transition: 0.3s;
+    font-size: 0.95rem;
+}
+
+.admin-sidebar .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white !important;
+}
+
+.bg-joy-gradient {
+    background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+}
+
+.x-small { font-size: 0.7rem; }
+
+.hover-bg-light:hover { background: #f8fafc; }
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .admin-sidebar { margin-left: -260px; position: absolute; z-index: 1000; }
+    .admin-sidebar.show { margin-left: 0; }
+}

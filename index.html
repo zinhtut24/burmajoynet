@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BurmaJoyNet | Daily Happiness Hub</title>
+    <title>BurmaJoyNet | Discover Your Happiness</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -11,189 +11,135 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="mood-default">
+<body class="landing-page">
 
     <div id="loading-screen">
-        <div class="loader-box">
-            <div class="joy-pulse"></div>
+        <div class="loader-box text-center">
+            <div class="spinner-joy"></div>
             <h2 class="logo-brand mt-3">Burma<span>JoyNet</span></h2>
         </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg sticky-top main-nav shadow-sm">
+    <nav class="navbar navbar-expand-lg sticky-top main-nav shadow-sm bg-white">
         <div class="container">
-            <a class="navbar-brand logo-brand fw-800" href="#">Burma<span>JoyNet</span></a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
-                <i class="bi bi-grid-3x3-gap-fill text-primary"></i>
+            <a class="navbar-brand logo-brand fw-800" href="index.html">Burma<span>JoyNet</span></a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#landingNav">
+                <i class="bi bi-list fs-2 text-primary"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navContent">
-                <ul class="navbar-nav ms-auto align-items-center gap-3">
-                    <li class="nav-item"><a class="nav-link px-3 active" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="/pages/clubs.html">Clubs</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#challenges">Challenges</a></li>
-                    <li class="nav-item dropdown px-2">
-                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle rounded-pill" data-bs-toggle="dropdown">EN</button>
-                        <ul class="dropdown-menu dropdown-menu-end border-0 shadow">
-                            <li><a class="dropdown-item" href="#">English</a></li>
-                            <li><a class="dropdown-item" href="#">မြန်မာ</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a href="/pages/register.html" class="btn btn-joy-primary rounded-pill px-4">Join Community</a></li>
+            <div class="collapse navbar-collapse" id="landingNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-2">
+                    <li class="nav-item"><a class="nav-link px-3 active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="pages/clubs.html">Clubs</a></li>
+                    <li class="nav-item ms-lg-2"><a href="pages/login.html" class="nav-link fw-bold text-primary">Login</a></li>
+                    <li class="nav-item"><a href="pages/register.html" class="btn btn-joy-primary rounded-pill px-4 shadow-sm text-white fw-bold">Get Started</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="hero-section py-5 text-center">
-        <div class="container py-4" data-aos="zoom-in">
-            <div class="quote-card mx-auto mb-5">
-                <span class="badge bg-primary px-3 rounded-pill mb-2">Daily Quote</span>
-                <p id="quote-text" class="h5 fw-600 italic">"Happiness is not by chance, but by choice."</p>
-            </div>
-            
-            <h1 class="display-3 fw-800 mb-4">How is your <span class="text-gradient">Soul</span> today?</h1>
-            <p class="text-muted mb-5">Select a mood to personalize your joyful experience.</p>
-            
-            <div class="mood-grid mx-auto">
-                <div class="mood-btn" onclick="updateMoodTheme('happy')">
-                    <div class="mood-emoji shadow-sm">🤩</div>
-                    <span class="fw-bold">Happy</span>
-                </div>
-                <div class="mood-btn" onclick="updateMoodTheme('sad')">
-                    <div class="mood-emoji shadow-sm">🥺</div>
-                    <span class="fw-bold">Sad</span>
-                </div>
-                <div class="mood-btn" onclick="updateMoodTheme('stress')">
-                    <div class="mood-emoji shadow-sm">🤯</div>
-                    <span class="fw-bold">Stressed</span>
-                </div>
-                <div class="mood-btn" onclick="updateMoodTheme('tired')">
-                    <div class="mood-emoji shadow-sm">😴</div>
-                    <span class="fw-bold">Tired</span>
-                </div>
+    <header class="hero-landing py-5 text-center overflow-hidden">
+        <div class="container py-5" data-aos="zoom-in">
+            <h1 class="display-2 fw-800 mb-4">Your Journey to <span class="text-gradient">Happiness</span> Starts Here.</h1>
+            <p class="lead text-muted mb-5 mx-auto" style="max-width: 700px;">
+                BurmaJoyNet is a community-driven platform designed to improve your mental well-being through joyful clubs, AI support, and positive connections.
+            </p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="pages/register.html" class="btn btn-joy-primary btn-lg rounded-pill px-5 shadow">Join Now - It's Free</a>
+                <a href="#features" class="btn btn-outline-secondary btn-lg rounded-pill px-5">Learn More</a>
             </div>
         </div>
     </header>
 
-    <section id="ai-response-area" class="py-4 d-none">
-        <div class="container">
-            <div class="ai-glass-card p-4 rounded-5 shadow-lg border-start border-primary border-5" data-aos="fade-up">
-                <div class="d-flex align-items-center gap-4">
-                    <div class="ai-bot-icon shadow"><i class="bi bi-robot"></i></div>
-                    <div>
-                        <h5 class="fw-800 mb-1" id="ai-status-title">AI Buddy Insight</h5>
-                        <p class="lead mb-0" id="ai-dynamic-msg"></p>
+    <section id="features" class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-800">Why choose <span class="text-primary">JoyNet?</span></h2>
+                <p class="text-muted">Features designed with your mental health in mind.</p>
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card p-5 rounded-5 shadow-sm border h-100 transition-all">
+                        <i class="bi bi-robot display-4 text-primary mb-4"></i>
+                        <h4 class="fw-bold">AI Buddy</h4>
+                        <p class="text-muted small">Talk to our personalized AI for support and daily positive insights.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card p-5 rounded-5 shadow-sm border h-100 transition-all">
+                        <i class="bi bi-people-fill display-4 text-success mb-4"></i>
+                        <h4 class="fw-bold">Hobby Clubs</h4>
+                        <div class="text-muted small">Connect with people who share your passions for music, art, and more.</div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card p-5 rounded-5 shadow-sm border h-100 transition-all">
+                        <i class="bi bi-trophy-fill display-4 text-warning mb-4"></i>
+                        <h4 class="fw-bold">Daily Tasks</h4>
+                        <p class="text-muted small">Complete small joyful tasks to earn points and build healthy habits.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <main class="container py-5">
-        <div class="row g-5">
-            <div class="col-lg-8">
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h3 class="fw-800" id="content-title">Suggested Clubs <i class="bi bi-stars text-warning"></i></h3>
-                    <a href="#" class="btn btn-link text-decoration-none fw-bold">View All</a>
-                </div>
-                <div class="row g-4" id="recommendation-engine">
-                    <div class="col-md-6">
-                        <div class="card border-0 glass-card h-100 shadow-sm overflow-hidden club-card">
-                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=500" class="card-img-top" alt="Music">
-                            <div class="card-body p-4 text-center">
-                                <h5 class="fw-bold">Explore Music Hub</h5>
-                                <p class="small text-muted mb-3">Find joy in every beat with 1.2k members.</p>
-                                <button class="btn btn-outline-primary btn-sm rounded-pill px-3">Join Now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="glass-widget p-4 mb-4 border-0 shadow-sm rounded-4" data-aos="fade-left">
-                    <h5 class="fw-800 mb-3 text-primary"><i class="bi bi-trophy-fill me-2"></i>Daily Task</h5>
-                    <div class="task-box p-3 rounded-4 bg-white shadow-sm border-start border-warning border-4">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="badge bg-soft-warning text-dark px-3 rounded-pill">10 XP</span>
-                            <small class="text-muted">Today</small>
-                        </div>
-                        <p class="mb-0 fw-bold small">Share a funny story in the Laughter Club</p>
-                    </div>
-                </div>
-
-                <div class="glass-widget p-4 border-0 shadow-sm rounded-4" data-aos="fade-left" data-aos-delay="200">
-                    <h5 class="fw-800 mb-3 text-danger"><i class="bi bi-heart-fill me-2"></i>Gratitude Wall</h5>
-                    <div id="gratitude-posts">
-                        <div class="grat-item mb-3 p-2 border-bottom">
-                            <p class="small mb-1 fst-italic">"Grateful for the morning coffee and quiet time."</p>
-                            <small class="text-muted">- @User_Joy24</small>
-                        </div>
-                    </div>
-                    <div class="input-group mt-3">
-                        <input type="text" class="form-control rounded-start-pill border-0 bg-light" placeholder="I'm grateful for...">
-                        <button class="btn btn-joy-primary rounded-end-pill px-3"><i class="bi bi-send"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer class="footer-custom bg-dark text-white pt-5 mt-5">
-        <div class="container py-4">
-            <div class="row g-4">
+    <footer class="footer-modern bg-white border-top pt-5 pb-4 mt-5">
+        <div class="container">
+            <div class="row g-5">
                 <div class="col-lg-4 col-md-6">
-                    <h3 class="logo-brand text-white fw-800">Burma<span>JoyNet</span></h3>
-                    <p class="text-muted mt-3 small pe-lg-5">Building the world's first digital happiness community where your well-being matters. Share joy, find clubs, and talk to AI.</p>
-                    <div class="social-links d-flex gap-3 mt-4 h4">
-                        <a href="#"><i class="bi bi-facebook"></i></a>
-                        <a href="#"><i class="bi bi-instagram"></i></a>
-                        <a href="#"><i class="bi bi-youtube"></i></a>
-                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                    <h3 class="logo-brand fw-800 mb-3">Burma<span>JoyNet</span></h3>
+                    <p class="text-secondary mb-4 pe-lg-5 fw-500">
+                        BurmaJoyNet is your digital sanctuary for happiness. We combine hobby-based communities with AI support to build a healthier, more joyful digital world.
+                    </p>
+                    <div class="d-flex gap-3 h4">
+                        <a href="#" class="social-icon-btn"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon-btn"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon-btn"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="social-icon-btn"><i class="bi bi-twitter-x"></i></a>
                     </div>
                 </div>
+
                 <div class="col-lg-2 col-6">
-                    <h6 class="fw-bold mb-4 text-uppercase tracking-wider">Explore</h6>
+                    <h6 class="fw-800 mb-4 text-dark text-uppercase small tracking-wider">Explore Hub</h6>
                     <ul class="list-unstyled footer-links">
-                        <li><a href="#">Clubs</a></li>
-                        <li><a href="#">Videos</a></li>
-                        <li><a href="#">Challenges</a></li>
-                        <li><a href="#">AI Buddy</a></li>
+                        <li class="mb-2"><a href="home-feed.html">Dashboard</a></li>
+                        <li class="mb-2"><a href="clubs.html">All Clubs</a></li>
+                        <li class="mb-2"><a href="videos.html">Video Feed</a></li>
+                        <li class="mb-2"><a href="challenges.html">Challenges</a></li>
+                        <li><a href="ai-buddy.html">AI Buddy</a></li>
                     </ul>
                 </div>
+
                 <div class="col-lg-2 col-6">
-                    <h6 class="fw-bold mb-4 text-uppercase tracking-wider">Company</h6>
+                    <h6 class="fw-800 mb-4 text-dark text-uppercase small tracking-wider">Support</h6>
                     <ul class="list-unstyled footer-links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms</a></li>
+                        <li class="mb-2"><a href="settings.html">Settings</a></li>
+                        <li class="mb-2"><a href="wallet.html">Earnings</a></li>
+                        <li class="mb-2"><a href="#">Privacy Policy</a></li>
+                        <li><a href="admin-dashboard.html" class="text-primary fw-bold">Admin Panel</a></li>
                     </ul>
                 </div>
+
                 <div class="col-lg-4 col-md-12">
-                    <h6 class="fw-bold mb-4 text-uppercase tracking-wider">Newsletter</h6>
-                    <p class="text-muted small">Subscribe to get daily positive tips and updates.</p>
-                    <div class="input-group mb-3">
-                        <input type="email" class="form-control bg-transparent border-secondary text-white rounded-start-pill" placeholder="Your email...">
-                        <button class="btn btn-primary rounded-end-pill px-4">Join</button>
+                    <h6 class="fw-800 mb-4 text-dark text-uppercase small tracking-wider">Join Our Newsletter</h6>
+                    <p class="text-secondary small mb-3">Stay updated with joyful tips and community news.</p>
+                    <div class="input-group mb-3 shadow-sm rounded-pill overflow-hidden border">
+                        <input type="email" class="form-control border-0 px-4 py-2 small shadow-none" placeholder="Email Address">
+                        <button class="btn btn-joy-primary px-4 border-0">Join</button>
                     </div>
                 </div>
             </div>
-            <hr class="my-5 border-secondary opacity-25">
+
+            <hr class="my-5 opacity-10">
+
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-                <p class="text-muted small mb-0">© 2026 BurmaJoyNet. Created for Joy and Happiness.</p>
-                <div class="d-flex gap-3 small text-muted">
-                    <span>English (US)</span>
-                    <span>Burmese (MM)</span>
+                <p class="text-muted small mb-0">© 2026 <b>BurmaJoyNet</b>. All Rights Reserved.</p>
+                <div class="d-flex gap-4 small text-muted">
+                    <span class="cursor-pointer hover-link">English (US)</span>
+                    <span class="cursor-pointer hover-link">မြန်မာ (MM)</span>
                 </div>
             </div>
         </div>
     </footer>
-
-    <div id="ai-buddy-btn" class="ai-float shadow-lg rounded-circle">
-        <div class="pulse-ring"></div>
-        <i class="bi bi-robot"></i>
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
